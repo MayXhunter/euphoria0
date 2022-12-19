@@ -13,9 +13,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private Animation top, buttom;
-    private ImageView Kimg;
-    private ImageView Aimg;
     private Button Kbtn;
     private Button Abtn;
     @Override
@@ -25,16 +22,7 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        top = AnimationUtils.loadAnimation(this, R.anim.top_animation);
-        buttom = AnimationUtils.loadAnimation(this, R.anim.buttom_animation);
 
-        Kimg = findViewById(R.id.Kimg);
-        Aimg = findViewById(R.id.Aimg);
-
-        Kimg.setAnimation(buttom);
-        Kbtn.setAnimation(top);
-        Abtn.setAnimation(buttom);
-        Aimg.setAnimation(top);
         Kbtn = findViewById(R.id.Kbtn);
         Kbtn.setOnClickListener(new View.OnClickListener() {
             @Override

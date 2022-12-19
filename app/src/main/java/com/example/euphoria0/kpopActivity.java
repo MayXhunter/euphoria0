@@ -28,12 +28,12 @@ public class kpopActivity extends AppCompatActivity {
         int[] imgs = new int[kpop.kpops.length];
 
         for(int i = 0; i<names.length;i++){
-            names[i] = anime.animes[i].getName();
-            price[i] = anime.animes[i].getName();
-            imgs[i] = anime.animes[i].getImageId();
+            names[i] = kpop.kpops[i].getName();
+            price[i] = kpop.kpops[i].getPrice();
+            imgs[i] = kpop.kpops[i].getImageId();
         }
         recyclerK.setLayoutManager(new GridLayoutManager(this,2));
-        kpopViewAdapter adapterk = new kpopViewAdapter(names, imgs,price);
+        ViewAdapter adapterk = new ViewAdapter(names, imgs,price);
         recyclerK.setAdapter(adapterk);
     }
 }

@@ -26,7 +26,7 @@ public class animeActivity extends AppCompatActivity {
 
         for(int i = 0; i<captions.length;i++){
             captions[i] = anime.animes[i].getName();
-            prices[i] = anime.animes[i].getName();
+            prices[i] = anime.animes[i].getPrice();
             ids[i] = anime.animes[i].getImageId();
         }
         recycler.setLayoutManager(new GridLayoutManager(this,2));
